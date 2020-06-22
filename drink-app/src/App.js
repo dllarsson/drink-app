@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './pages/home';
 import Explore from './pages/explore';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './styles/App.css';
 
 function App() {
 
@@ -10,12 +11,10 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={'/home'} component={Home} exact/>
+        <Route path={'/'} component={Home} exact/>
         <Route path={'/explore'} component={Explore} exact/>
         <Route component={NotFound} />
       </Switch>
-      <div className="App">
-      </div>
     </BrowserRouter>
   );
 }

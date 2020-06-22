@@ -1,0 +1,20 @@
+.search {
+    margin: auto;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.result-item{
+    padding: 5px;
+}
+
+.results p {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    font-family: Cambria;
+}
