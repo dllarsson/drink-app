@@ -6,7 +6,7 @@ import '../styles/Search.css';
 const Search = () => {
 
     const [searchInput, setSearchInput] = useState("");
-    const [resultItems, setResultItems] = useState();
+    const [resultItems, setResultItems] = useState([]);
 
     const handleChange = (e) => {
         setSearchInput(e.target.value);
@@ -26,11 +26,13 @@ const Search = () => {
     }
 
     return (
-        <div className="search">
-            <input onChange={handleChange} />
-            <button onClick={handleClick}>Search</button>
+        <div>
+            <div id="search">
+                <input onChange={handleChange} />
+                <button onClick={handleClick}>Search</button>
+            </div>
             <div className="results">
-                {resultItems}   
+                {resultItems.length > 0 ? resultItems : <p>No drink with that name was found...</p>}   
             </div>
         </div>
     )

@@ -1,7 +1,8 @@
-.search {
-    margin: auto;
+#search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .results {
     display: flex;
     flex-wrap: wrap;
