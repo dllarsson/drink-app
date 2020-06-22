@@ -8,7 +8,7 @@ const Home = () => {
             <NavBar />
             <h1>Welcome to The Cocktail Explorer!</h1>
             <img 
-                src="https://images.all-free-download.com/images/graphiclarge/cocktail_of_highdefinition_picture_five_166470.jpg" alt="img of cocktails" />
+                src="https://cdn.discordapp.com/attachments/711173631555797015/724534134935912448/doodle-sketch-cocktails-alcohol-drinks-glass_53562-3210.jpg" alt="img of cocktails" />
         </div>
     )
 }
