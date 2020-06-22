@@ -4,3 +4,8 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+.home-content h1 {
+    color: rgb(118, 202, 34);
+    font-size: 55px;
+}

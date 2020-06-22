@@ -7,7 +7,7 @@ const Explore = () => {
     return (
         <div className="explore-content">
             <NavBar />
-            <h3>Find your favorite drink!</h3>
+            <h1>Find your favorite drink!</h1>
             <Search />
         </div>
     )

@@ -3,3 +3,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+.explore-content h1 {
+    color: rgb(0, 236, 185);
+    font-size: 65px;
+}

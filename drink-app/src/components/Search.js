@@ -6,11 +6,10 @@ import '../styles/Search.css';
 const Search = () => {
 
     const [searchInput, setSearchInput] = useState("");
-    const [resultItems, setResultItems] = useState([]);
+    const [resultItems, setResultItems] = useState();
 
     const handleChange = (e) => {
         setSearchInput(e.target.value);
-        console.log(searchInput);
     }
 
     const handleClick = (e) => {
@@ -21,8 +20,7 @@ const Search = () => {
                                                     name={item.name} 
                                                     key={item.name}
                                                 />));
-        console.log(result);
-
+                                                console.log(result);
     }
 
     return (
@@ -32,7 +30,7 @@ const Search = () => {
                 <button onClick={handleClick}>Search</button>
             </div>
             <div className="results">
-                {resultItems.length > 0 ? resultItems : <p>No drink with that name was found...</p>}   
+                {resultItems && resultItems.length === 0 ? <p>No drink with that name was found...</p> : resultItems}   
             </div>
         </div>
     )
