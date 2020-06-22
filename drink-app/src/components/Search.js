@@ -17,8 +17,8 @@ const Search = () => {
 
         if (searchInput !== ""){
             const result = DrinksData.cocktails.filter((item) => {
-                item.name = item.name.toLowerCase();
-                return item.name.includes(searchInput);
+                const lowerCaseName = item.name.toLowerCase();
+                return lowerCaseName.includes(searchInput);
             });
     
             setResultItems(result.map(item => <ResultItem 
@@ -26,6 +26,8 @@ const Search = () => {
                                                         name={item.name} 
                                                         key={item.name}
                                                     />));
+        } else {
+            setResultItems(undefined);
         }
     }, [searchInput])
 
@@ -37,10 +39,9 @@ const Search = () => {
 
     // const handleClick = (e) => {
     //     const result = DrinksData.cocktails.filter((item) => {
-    //         item.name = item.name.toLowerCase();
-    //         return item.name.includes(searchInput);
+    //         const lowerCaseName = item.name.toLowerCase();
+    //         return lowerCaseName.includes(searchInput);
     //     });
-
     //     setResultItems(result.map(item => <ResultItem 
     //                                                 src={item.image} 
     //                                                 name={item.name} 
